@@ -31,7 +31,6 @@ class IPController extends Controller
             if (time() >= strtotime($item->time.':00') && time() < strtotime($item->time.':57')) {
                 $url='http://'.$url.':'.$item->port.'/'.$item->uri;                
                 $response = $client->request('GET', $url);
-                echo $response->getBody().'<br>';
             }
         }
 

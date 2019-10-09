@@ -21,3 +21,9 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::resource('ip','IPController');
 Route::resource('routine','RoutineController');
+
+Route::get('/migrate', function () {
+    $exitCode = Artisan::call('migrate');
+
+    return $exitCode;
+})->middleware('CheckUser');
