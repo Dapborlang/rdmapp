@@ -26,4 +26,4 @@ Route::get('/migrate', function () {
     $exitCode = Artisan::call('migrate');
 
     return $exitCode;
-});
+})->middleware('CheckUser');
