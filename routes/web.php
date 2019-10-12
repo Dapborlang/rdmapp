@@ -27,3 +27,5 @@ Route::get('/migrate', function () {
 
     return $exitCode;
 })->middleware('CheckUser');
+
+Route::get('ui','ButtonsController@index');
