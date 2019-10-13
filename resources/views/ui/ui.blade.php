@@ -110,9 +110,10 @@
 		    	$.ajax({
 					url: '{{ url('/') }}/getURIData',
 					data: {
-						uri: 'http://{{$ip}}/'+id
+						uri 	: 'http://{{$ip}}/'+id,
+						_token	: '{{ csrf_token() }}',
 					},
-					type: 'GET',
+					type: 'POST',
 					success: function(data)
                     {
                     	$("#status").html(data);
