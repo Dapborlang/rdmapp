@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\IP;
 
 class ButtonsController extends Controller
 {
@@ -14,6 +15,9 @@ class ButtonsController extends Controller
 
     public function index()
     {
-    	return view('ui.ui');
+    	$Address=IP::where('detail','home')
+    	->first();
+    	$ip= $Address->ip;
+    	return view('ui.ui',compact('ip'));
     }
 }

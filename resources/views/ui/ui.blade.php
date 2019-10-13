@@ -72,38 +72,107 @@
 
 	<script type="text/javascript">
 		$( document ).ready(function() {
-			$("#bank").change(function() {
-				$.ajax({
-					url: '{{ url('/') }}/bankbranch/'+this.value,
+			$('#p1').click(function () {
+		        if ($(this).is(':checked')) {
+		            ajaxCall("p1on");
+		        }
+		        else
+		        {
+		        	ajaxCall("p1off");
+		        }
+		    });
+
+			$('#p2').click(function () {
+		        if ($(this).is(':checked')) {
+		            ajaxCall("p2on");
+		        }
+		        else
+		        {
+		        	ajaxCall("p2off");
+		        }
+		    });
+
+		    $('#p4').click(function () {
+		        if ($(this).is(':checked')) {
+		            ajaxCall("p4on");
+		        }
+		        else
+		        {
+		        	ajaxCall("p4off");
+		        }
+		    });
+
+
+
+		    function ajaxCall(id)
+		    {
+		    	$("#myModal").modal('show');
+		    	$.ajax({
+					url: '{{ url('/') }}/getURIData',
+					data: {
+						uri: 'http://{{$ip}}/'+id
+					},
 					type: 'GET',
 					success: function(data)
                     {
-                    	var x='<option value="">--SELECT BRANCH NAME--</option>';
-                    	for(i=0;i<data.length;i++)
-                		{
-                			x+="<option value='"+data[i].ifsc+"'>"+data[i].branchname+"</option>";
-                		}
-                		$("#ifsc").html(x);
+                    	$("#status").html(data);
+                    	$("#myModal").modal('hide');
                     }
 				});
-				
-			});
+		    }				
 		});
 	</script>
 <body>
 
 
 <h2>Switches</h2>
+<table class="table table-striped">
+	<tr>
+		<td class="col-sm-6 col-xs-6">
+			Ceiling Light:
+		</td>
+		<td class="col-sm-6 col-xs-6">
+			<label class="switch">
+			  <input type="checkbox" id="p1">
+			  <span class="slider"></span>
+			</label>
+		</td>
+	</tr>
+	<tr>
+		<td class="col-sm-6 col-xs-6">
+			Side Light:
+		</td>
+		<td class="col-sm-6 col-xs-6">
+			<label class="switch">
+			  <input type="checkbox" id="p2">
+			  <span class="slider"></span>
+			</label>
+		</td>
+	</tr>
+	<tr>
+		<td class="col-sm-6 col-xs-6">
+			Geyser:
+		</td>
+		<td class="col-sm-6 col-xs-6">
+			<label class="switch">
+			  <input type="checkbox"id="p4">
+			  <span class="slider"></span>
+			</label>
+		</td>
+	</tr>
+</table>
+<div id="status">
+</div>
 
-<label class="switch">
-  <input type="checkbox">
-  <span class="slider"></span>
-</label>
-
-<label class="switch">
-  <input type="checkbox" checked>
-  <span class="slider"></span>
-</label><br><br>
+<div class="modal fade" id="myModal">
+    <div class="modal-dialog">
+	    <div class="modal-content">
+	        <div class="modal-body">
+	        	Please Wait...
+	        </div>
+      </div>
+    </div>
+</div>
 
 </body>
 </html> 

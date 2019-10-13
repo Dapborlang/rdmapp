@@ -29,3 +29,5 @@ Route::get('/migrate', function () {
 })->middleware('CheckUser');
 
 Route::get('ui','ButtonsController@index');
+
+Route::get('getURIData','IPController@getURIData');
