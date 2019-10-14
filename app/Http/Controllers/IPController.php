@@ -105,7 +105,7 @@ class IPController extends Controller
     public function getURIData(Request $request)
     {
         $client = new \GuzzleHttp\Client();
-        $url=$request->uri;                
+        $url=urldecode($request->uri);                
         $response = $client->request('GET', $url);
         return $response;
     }
