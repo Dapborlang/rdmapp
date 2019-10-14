@@ -108,12 +108,11 @@
 		    {
 		    	$("#myModal").modal('show');
 		    	$.ajax({
-					url: '{{ url('/') }}/getURIData',
+					url: '{{ url('/') }}/getdata',
 					data: {
 						uri 	: 'http://{{$ip}}/'+id,
-						_token	: '{{ csrf_token() }}',
 					},
-					type: 'POST',
+					type: 'GET',
 					success: function(data)
                     {
                     	$("#status").html(data);

@@ -30,4 +30,4 @@ Route::get('/migrate', function () {
 
 Route::get('ui','ButtonsController@index');
 
-Route::post('getdata','IPController@getURIData');
+Route::get('getdata','IPController@getURIData');
