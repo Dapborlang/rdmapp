@@ -110,7 +110,8 @@
 		    	$.ajax({
 					url: '{{ url('/') }}/getdata',
 					data: {
-						uri 	: 'http://{{$ip}}/'+id,
+						uri 	: '{{$ip}}',
+						data    : id,
 					},
 					type: 'GET',
 					success: function(data)
