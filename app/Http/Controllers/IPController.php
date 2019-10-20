@@ -16,8 +16,7 @@ class IPController extends Controller
      */
     public function index()
     {
-        $ch = curl_init();
-        // $client = new \GuzzleHttp\Client();
+        $client = new \GuzzleHttp\Client();
         $server=$_GET['server'];
         $url=$_SERVER['REMOTE_ADDR'];
 
@@ -33,13 +32,7 @@ class IPController extends Controller
         {
             if (time() >= strtotime($item->time.':00') && time() < strtotime($item->time.':57')) {
                 $url='http://'.$url.':'.$item->port.'/'.$item->uri;                
-                // $response = $client->request('GET', $url);
-                
-                curl_setopt($ch, CURLOPT_URL, $url);
-                curl_setopt($ch, CURLOPT_POST, 0);
-                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-                $response = curl_exec ($ch);
+                $response = $client->request('GET', $url);
             }
         }
 
@@ -47,12 +40,7 @@ class IPController extends Controller
         foreach ($status as $item) 
         {
                 $url='http://'.$item->ipAddress->ip.':'.$item->port.'/'.$item->pin.$item->status;                
-                // $response = $client->request('GET', $url);
-                curl_setopt($ch, CURLOPT_URL, $url);
-                curl_setopt($ch, CURLOPT_POST, 0);
-                curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-
-                $response = curl_exec ($ch);
+                $response = $client->request('GET', $url);
         }
 
     }
