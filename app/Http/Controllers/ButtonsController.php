@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\IP;
+use App\SwitchStatus;
 
 class ButtonsController extends Controller
 {
@@ -15,9 +16,9 @@ class ButtonsController extends Controller
 
     public function index()
     {
-    	$Address=IP::where('detail','home')
-    	->first();
-    	$ip= $Address->ip;
-    	return view('ui.ui',compact('ip'));
+    	$status=SwitchStatus::where('i_p_s_id',$_GET['ip_id'])
+        ->where('port',$_GET['port'])
+    	->get();
+    	return view('ui.ui',compact('status'));
     }
 }

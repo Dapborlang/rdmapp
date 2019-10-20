@@ -72,52 +72,32 @@
 
 	<script type="text/javascript">
 		$( document ).ready(function() {
-			$('#p1').click(function () {
+			@foreach($status as $item)
+			$('#{{$item->pin}}').click(function () {
 		        if ($(this).is(':checked')) {
-		            ajaxCall("p1on");
+		            ajaxCall("on","{{$item->id}}");
 		        }
 		        else
 		        {
-		        	ajaxCall("p1off");
+		        	ajaxCall("off","{{$item->id}}");
 		        }
 		    });
+			@endforeach
 
-			$('#p2').click(function () {
-		        if ($(this).is(':checked')) {
-		            ajaxCall("p2on");
-		        }
-		        else
-		        {
-		        	ajaxCall("p2off");
-		        }
-		    });
-
-		    $('#p4').click(function () {
-		        if ($(this).is(':checked')) {
-		            ajaxCall("p4on");
-		        }
-		        else
-		        {
-		        	ajaxCall("p4off");
-		        }
-		    });
-
-
-
-		    function ajaxCall(id)
+		    function ajaxCall(stat,id)
 		    {
-		    	$("#myModal").modal('show');
+		    	$("#status").html('Please Wait...'); 
 		    	$.ajax({
-					url: '{{ url('/') }}/getdata',
+					url: '{{ url('/') }}/setStatus',
 					data: {
-						uri 	: '{{$ip}}',
-						data    : id,
+						'id' 			: id,
+						'status'    	: stat,
+						'_token'  		: '{{ csrf_token() }}',
 					},
-					type: 'GET',
+					type: 'POST',
 					success: function(data)
                     {
-                    	$("#status").html(data);
-                    	$("#myModal").modal('hide');
+                    	$("#status").html(data);                  	
                     }
 				});
 		    }				
@@ -128,39 +108,19 @@
 
 <h2>Switches</h2>
 <table class="table table-striped">
+	@foreach($status as $item)
 	<tr>
 		<td class="col-sm-6 col-xs-6">
-			Ceiling Light:
+			{{$item->detail}}:
 		</td>
 		<td class="col-sm-6 col-xs-6">
 			<label class="switch">
-			  <input type="checkbox" id="p1">
+			  <input type="checkbox" id="{{$item->pin}}" @if ($item->status=='on') checked @endif >
 			  <span class="slider"></span>
 			</label>
 		</td>
 	</tr>
-	<tr>
-		<td class="col-sm-6 col-xs-6">
-			Side Light:
-		</td>
-		<td class="col-sm-6 col-xs-6">
-			<label class="switch">
-			  <input type="checkbox" id="p2">
-			  <span class="slider"></span>
-			</label>
-		</td>
-	</tr>
-	<tr>
-		<td class="col-sm-6 col-xs-6">
-			Geyser:
-		</td>
-		<td class="col-sm-6 col-xs-6">
-			<label class="switch">
-			  <input type="checkbox"id="p4">
-			  <span class="slider"></span>
-			</label>
-		</td>
-	</tr>
+	@endforeach
 </table>
 <div id="status">
 </div>

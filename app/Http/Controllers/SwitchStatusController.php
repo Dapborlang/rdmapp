@@ -1,0 +1,100 @@
+<?php
+
+namespace App\Http\Controllers;
+
+use App\SwitchStatus;
+use Illuminate\Http\Request;
+use App\Http\Controllers\Controller;
+use App\IP;
+
+class SwitchStatusController extends Controller
+{
+    /**
+     * Display a listing of the resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+
+    public function __construct()
+    {
+        $this->middleware('auth');
+        $this->middleware('AuthUser');
+    }
+
+    public function index()
+    {
+        //
+    }
+
+    /**
+     * Show the form for creating a new resource.
+     *
+     * @return \Illuminate\Http\Response
+     */
+    public function create()
+    {
+        $columns = \DB::connection()->getSchemaBuilder()->getColumnListing("switch_statuses");
+        $i_p_s_id=IP::all();
+        $postData='switches';
+        $card_header='Switch';
+        $select = array('i_p_s_id'=>$i_p_s_id);
+        return view('autoroute.create', compact('columns','postData','card_header','select'));
+    }
+
+    /**
+     * Store a newly created resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    public function store(Request $request)
+    {
+        SwitchStatus::create($request->all());
+        return redirect()->back()->with('message', 'Added Successfully');
+    }
+
+    /**
+     * Display the specified resource.
+     *
+     * @param  \App\SwitchStatus  $switchStatus
+     * @return \Illuminate\Http\Response
+     */
+    public function show(SwitchStatus $switchStatus)
+    {
+        //
+    }
+
+    /**
+     * Show the form for editing the specified resource.
+     *
+     * @param  \App\SwitchStatus  $switchStatus
+     * @return \Illuminate\Http\Response
+     */
+    public function edit(SwitchStatus $switchStatus)
+    {
+        //
+    }
+
+    /**
+     * Update the specified resource in storage.
+     *
+     * @param  \Illuminate\Http\Request  $request
+     * @param  \App\SwitchStatus  $switchStatus
+     * @return \Illuminate\Http\Response
+     */
+    public function update(Request $request, SwitchStatus $switchStatus)
+    {
+        //
+    }
+
+    /**
+     * Remove the specified resource from storage.
+     *
+     * @param  \App\SwitchStatus  $switchStatus
+     * @return \Illuminate\Http\Response
+     */
+    public function destroy(SwitchStatus $switchStatus)
+    {
+        //
+    }
+}
