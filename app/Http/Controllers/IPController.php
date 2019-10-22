@@ -36,11 +36,15 @@ class IPController extends Controller
             }
         }
 
-        $status=SwitchStatus::all();
+        $status=SwitchStatus::where('flag','U')
+        ->get();
         foreach ($status as $item) 
         {
                 $url='http://'.$item->ipAddress->ip.':'.$item->port.'/'.$item->pin.$item->status;                
                 $response = $client->request('GET', $url);
+                $swithStat= SwitchStatus::findOrfail($item->id);
+                $swithStat->flag = "C";
+                $swithStat->save();
         }
 
     }
@@ -113,12 +117,9 @@ class IPController extends Controller
 
     public function setStatus(Request $request)
     {
-        // $client = new \GuzzleHttp\Client();
-        // $url=urldecode('http://'.$_GET['uri'].'/'.$_GET['data']);                
-        // $response = $client->request('GET', $url);
-        // return $response;
         $Status=SwitchStatus::findOrfail($request->id);
         $Status->status=$request->status;
+        $Status->flag='U';
         $Status->save();
         return $Status->pin.$Status->status;
     }

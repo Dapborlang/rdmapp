@@ -20,6 +20,7 @@ class CreateSwitchStatusesTable extends Migration
             $table->string('port');
             $table->string('pin');
             $table->string('status');
+            $table->string('flag');
             $table->timestamps();
         });
     }

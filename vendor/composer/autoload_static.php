@@ -478,6 +478,7 @@ class ComposerStaticInitc44767dfb3985e370c361fdc194763d4
         'App\\Http\\Controllers\\IPController' => __DIR__ . '/../..' . '/app/Http/Controllers/IPController.php',
         'App\\Http\\Controllers\\InstructionController' => __DIR__ . '/../..' . '/app/Http/Controllers/InstructionController.php',
         'App\\Http\\Controllers\\RoutineController' => __DIR__ . '/../..' . '/app/Http/Controllers/RoutineController.php',
+        'App\\Http\\Controllers\\SwitchStatusController' => __DIR__ . '/../..' . '/app/Http/Controllers/SwitchStatusController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\AuthUser' => __DIR__ . '/../..' . '/app/Http/Middleware/AuthUser.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',

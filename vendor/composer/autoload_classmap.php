@@ -19,6 +19,7 @@ return array(
     'App\\Http\\Controllers\\IPController' => $baseDir . '/app/Http/Controllers/IPController.php',
     'App\\Http\\Controllers\\InstructionController' => $baseDir . '/app/Http/Controllers/InstructionController.php',
     'App\\Http\\Controllers\\RoutineController' => $baseDir . '/app/Http/Controllers/RoutineController.php',
+    'App\\Http\\Controllers\\SwitchStatusController' => $baseDir . '/app/Http/Controllers/SwitchStatusController.php',
     'App\\Http\\Kernel' => $baseDir . '/app/Http/Kernel.php',
     'App\\Http\\Middleware\\AuthUser' => $baseDir . '/app/Http/Middleware/AuthUser.php',
     'App\\Http\\Middleware\\Authenticate' => $baseDir . '/app/Http/Middleware/Authenticate.php',
