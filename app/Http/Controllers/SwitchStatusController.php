@@ -23,7 +23,11 @@ class SwitchStatusController extends Controller
 
     public function index()
     {
-        //
+        $columns = \DB::connection()->getSchemaBuilder()->getColumnListing("switch_statuses");
+        $table=SwitchStatus::all();
+        $card_header='SwitchStatus';
+        $route='switches';
+        return view('autoroute.index', compact('columns','table','card_header','route'));
     }
 
     /**
@@ -70,9 +74,13 @@ class SwitchStatusController extends Controller
      * @param  \App\SwitchStatus  $switchStatus
      * @return \Illuminate\Http\Response
      */
-    public function edit(SwitchStatus $switchStatus)
+    public function edit($id)
     {
-        //
+        $columns = \DB::connection()->getSchemaBuilder()->getColumnListing("switch_statuses");
+        $table=SwitchStatus::findOrFail($id);
+        $route='switches';
+        $card_header='Switch';
+        return view('autoroute.edit', compact('columns','table','route','card_header'));
     }
 
     /**
@@ -82,9 +90,11 @@ class SwitchStatusController extends Controller
      * @param  \App\SwitchStatus  $switchStatus
      * @return \Illuminate\Http\Response
      */
-    public function update(Request $request, SwitchStatus $switchStatus)
+    public function update(Request $request, $id)
     {
-        //
+        $update=SwitchStatus::findOrFail($id);
+        $update->fill($request->all())->save();
+        return redirect()->back()->with('message', 'Updated Successfully');
     }
 
     /**
