@@ -16,6 +16,7 @@ class IPController extends Controller
      */
     public function index()
     {
+        $time= \Carbon\Carbon::now();
         $client = new \GuzzleHttp\Client();
         $server=$_GET['server'];
         $url=$_SERVER['REMOTE_ADDR'];
@@ -26,8 +27,8 @@ class IPController extends Controller
         );
 
         $routine=Routine::where('i_p_s_id',$updateUrl->id)
+        ->where('time',$time->hour.':'.$time->minute)
         ->get();
-
         foreach ($routine as $item) 
         {
             if (time() >= strtotime($item->time.':00') && time() < strtotime($item->time.':57')) {
