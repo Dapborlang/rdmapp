@@ -33,3 +33,5 @@ Route::get('ui','ButtonsController@index');
 Route::post('setStatus','IPController@setStatus');
 
 Route::resource('switches','SwitchStatusController');
+
+Route::get('/cronjob','IPController@CronJob');

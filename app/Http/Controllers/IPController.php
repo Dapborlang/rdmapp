@@ -25,25 +25,25 @@ class IPController extends Controller
             ['ip' => $url]
         );
 
-        $routine=Routine::where('i_p_s_id',$updateUrl->id)
-        ->get();
-        foreach ($routine as $item) 
-        {
-            if (time() >= strtotime($item->time.':00') && time() < strtotime($item->time.':57')) {
-                $url='http://'.$url.':'.$item->port.'/'.$item->uri;                
-                $response = $client->request('GET', $url);
-            }
-        }
+        // $routine=Routine::where('i_p_s_id',$updateUrl->id)
+        // ->get();
+        // foreach ($routine as $item) 
+        // {
+        //     if (time() >= strtotime($item->time.':00') && time() < strtotime($item->time.':57')) {
+        //         $url='http://'.$url.':'.$item->port.'/'.$item->uri;                
+        //         $response = $client->request('GET', $url);
+        //     }
+        // }
 
         $status=SwitchStatus::where('flag','U')
         ->get();
         foreach ($status as $item) 
         {
-                $url='http://'.$item->ipAddress->ip.':'.$item->port.'/'.$item->pin.$item->status;                
-                $response = $client->request('GET', $url);
-                $swithStat= SwitchStatus::findOrfail($item->id);
-                $swithStat->flag = "C";
-                $swithStat->save();
+            $url='http://'.$item->ipAddress->ip.':'.$item->port.'/'.$item->pin.$item->status;                
+            $response = $client->request('GET', $url);
+            $swithStat= SwitchStatus::findOrfail($item->id);
+            $swithStat->flag = "C";
+            $swithStat->save();
         }
 
     }
@@ -121,5 +121,19 @@ class IPController extends Controller
         $Status->flag='U';
         $Status->save();
         return $Status->pin.$Status->status;
+    }
+
+    public function CronJob()
+    {
+        $client = new \GuzzleHttp\Client();
+        
+        $routine=Routine::all();
+        foreach ($routine as $item) 
+        {
+            if (time() >= strtotime($item->time.':00') && time() < strtotime($item->time.':57')) {
+                $url='http://'.$item->ipAddress->ip.':'.$item->port.'/'.$item->uri;   ;             
+                $response = $client->request('GET', $url);
+            }
+        }
     }
 }
