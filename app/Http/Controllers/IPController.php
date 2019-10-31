@@ -110,7 +110,7 @@ class IPController extends Controller
         $Status=SwitchStatus::findOrfail($request->id);
         
         $client = new \GuzzleHttp\Client();
-        $url='http://'.$Status->ipAddress->ip.':'.$Status->port.'/'.$Status->pin.$Status->status;               
+        $url='http://'.$Status->ipAddress->ip.':'.$Status->port.'/'.$Status->pin.$request->status;               
         $response = $client->request('GET', $url);
 
         $Status->status=$request->status;
