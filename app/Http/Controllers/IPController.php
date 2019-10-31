@@ -26,16 +26,16 @@ class IPController extends Controller
         );
 
 
-        $status=SwitchStatus::where('flag','U')
-        ->get();
-        foreach ($status as $item) 
-        {
-            $url='http://'.$item->ipAddress->ip.':'.$item->port.'/'.$item->pin.$item->status;                
-            $response = $client->request('GET', $url);
-            $swithStat= SwitchStatus::findOrfail($item->id);
-            $swithStat->flag = "C";
-            $swithStat->save();
-        }
+        // $status=SwitchStatus::where('flag','U')
+        // ->get();
+        // foreach ($status as $item) 
+        // {
+        //     $url='http://'.$item->ipAddress->ip.':'.$item->port.'/'.$item->pin.$item->status;                
+        //     $response = $client->request('GET', $url);
+        //     $swithStat= SwitchStatus::findOrfail($item->id);
+        //     $swithStat->flag = "C";
+        //     $swithStat->save();
+        // }
 
     }
 
@@ -108,7 +108,7 @@ class IPController extends Controller
     public function setStatus(Request $request)
     {
         $Status=SwitchStatus::findOrfail($request->id);
-        
+
         $client = new \GuzzleHttp\Client();
         $url='http://'.$Status->ipAddress->ip.':'.$Status->port.'/'.$Status->pin.$request->status;               
         $response = $client->request('GET', $url);
@@ -121,8 +121,7 @@ class IPController extends Controller
 
     public function CronJob()
     {
-        $client = new \GuzzleHttp\Client();
-        
+        $client = new \GuzzleHttp\Client();        
         $routine=Routine::all();
         foreach ($routine as $item) 
         {
