@@ -25,15 +25,6 @@ class IPController extends Controller
             ['ip' => $url]
         );
 
-        // $routine=Routine::where('i_p_s_id',$updateUrl->id)
-        // ->get();
-        // foreach ($routine as $item) 
-        // {
-        //     if (time() >= strtotime($item->time.':00') && time() < strtotime($item->time.':57')) {
-        //         $url='http://'.$url.':'.$item->port.'/'.$item->uri;                
-        //         $response = $client->request('GET', $url);
-        //     }
-        // }
 
         $status=SwitchStatus::where('flag','U')
         ->get();
@@ -117,10 +108,15 @@ class IPController extends Controller
     public function setStatus(Request $request)
     {
         $Status=SwitchStatus::findOrfail($request->id);
+        
+        $client = new \GuzzleHttp\Client();
+        $url='http://'.$Status->ipAddress->ip.':'.$Status->port.'/'.$Status->pin.$Status->status;               
+        $response = $client->request('GET', $url);
+
         $Status->status=$request->status;
-        $Status->flag='U';
+        // $Status->flag='U';
         $Status->save();
-        return $Status->pin.$Status->status;
+        return $response;
     }
 
     public function CronJob()
