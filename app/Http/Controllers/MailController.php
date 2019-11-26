@@ -16,7 +16,7 @@ class MailController extends Controller
     	$ipcheck=IP::select('ip')
     			->where('detail','home')
     			->first();
-    	if($ip==$ipcheck)
+    	if($ip==$ipcheck['ip'])
     	{
     		$Status=SwitchStatus::findOrfail(8);
     		$Status->status='off';
