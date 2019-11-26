@@ -7,6 +7,7 @@ use App\Http\Controllers\Controller;
 use Mail;
 use App\Mail\SendMail;
 use App\IP;
+use App\SwitchStatus;
 
 class MailController extends Controller
 {
