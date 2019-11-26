@@ -126,7 +126,7 @@ class IPController extends Controller
         foreach ($routine as $item) 
         {
             if (time() >= strtotime($item->time.':00') && time() < strtotime($item->time.':57')) {
-                $url='http://'.$item->ipAddress->ip.':'.$item->port.'/'.$item->uri;   ;             
+                $url='http://'.$item->ipAddress->ip.':'.$item->port.'/'.$item->uri;             
                 $response = $client->request('GET', $url);
             }
         }

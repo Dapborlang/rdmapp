@@ -56,7 +56,7 @@ return [
     */
 
     'from' => [
-        'address' => env('MAIL_FROM_ADDRESS', 'automation@rdmapp.in'),
+        'address' => env('MAIL_FROM_ADDRESS', 'desbro8512@gmail.com'),
         'name' => env('MAIL_FROM_NAME', 'Automation System'),
     ],
 
