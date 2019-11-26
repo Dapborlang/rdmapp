@@ -23,6 +23,10 @@ class MailController extends Controller
 	        $Status->save();
     		Mail::send(new SendMail());
     	}
+    	else
+    	{
+    		return "fail to load";
+    	}
     	
     }
 }
