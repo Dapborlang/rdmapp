@@ -39,3 +39,4 @@ Route::get('/cronjob','IPController@CronJob');
 Route::get('/pump/0','MailController@send');
 
 Route::post('/webhook/status','WebhookController@status');
+Route::post('/webhook/ip','WebhookController@ipUpdate');

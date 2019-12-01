@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Controllers\Controller;
 use App\SwitchStatus;
+use App\IP;
 
 class WebhookController extends Controller
 {
@@ -30,5 +31,17 @@ class WebhookController extends Controller
         // $Status->flag='U';
         $Status->save();
         return $response;
+    }
+
+    public function ipUpdate()
+    {
+        $client = new \GuzzleHttp\Client();
+        $server=$_POST['server'];
+        $url=$_SERVER['REMOTE_ADDR'];
+
+        $updateUrl=IP::updateOrCreate(
+            ['detail' => $server],
+            ['ip' => $url]
+        );       
     }
 }
