@@ -30,11 +30,7 @@ class SwitchStatusController extends Controller
         return view('autoroute.index', compact('columns','table','card_header','route'));
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function create()
     {
         $columns = \DB::connection()->getSchemaBuilder()->getColumnListing("switch_statuses");
@@ -45,12 +41,6 @@ class SwitchStatusController extends Controller
         return view('autoroute.create', compact('columns','postData','card_header','select'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         SwitchStatus::create($request->all());

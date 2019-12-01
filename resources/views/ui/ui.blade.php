@@ -87,7 +87,11 @@
 
 		    function ajaxCall(stat,id)
 		    {
-		    	$("#status").html('Please Wait...'); 
+		    	$("#status").html('Please Wait...');
+		    	$("#myModal").modal({
+				    backdrop: 'static',
+				    keyboard: false
+				});
 		    	$.ajax({
 					url: '{{ url('/') }}/setStatus',
 					data: {
@@ -98,7 +102,8 @@
 					type: 'POST',
 					success: function(data)
                     {
-                    	$("#status").html(data);                  	
+                    	$("#status").html(data);
+                    	location.reload();
                     }
 				});
 		    }				
@@ -126,7 +131,7 @@
 <div id="status">
 </div>
 
-<div class="modal fade" id="myModal">
+<div class="modal" id="myModal">
     <div class="modal-dialog">
 	    <div class="modal-content">
 	        <div class="modal-body">
