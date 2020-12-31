@@ -1,0 +1,230 @@
+[2020-12-15 11:13:43] local.ERROR: include(C:\Bitnami\wampstack-7.3.10-0\apache2\rdmapp\vendor\composer/../doctrine/inflector/lib/Doctrine/Common/Inflector/Inflector.php): failed to open stream: No such file or directory {"exception":"[object] (ErrorException(code: 0): include(C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\composer/../doctrine/inflector/lib/Doctrine/Common/Inflector/Inflector.php): failed to open stream: No such file or directory at C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\composer\\ClassLoader.php:444)
+[stacktrace]
+#0 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\composer\\ClassLoader.php(444): Illuminate\\Foundation\\Bootstrap\\HandleExceptions->handleError(2, 'include(C:\\\\Bitn...', 'C:\\\\Bitnami\\\\wamp...', 444, Array)
+#1 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\composer\\ClassLoader.php(444): include()
+#2 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\composer\\ClassLoader.php(322): Composer\\Autoload\\includeFile('C:\\\\Bitnami\\\\wamp...')
+#3 [internal function]: Composer\\Autoload\\ClassLoader->loadClass('Doctrine\\\\Common...')
+#4 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Pluralizer.php(86): spl_autoload_call('Doctrine\\\\Common...')
+#5 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Str.php(445): Illuminate\\Support\\Pluralizer::singular('ip')
+#6 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResourceRegistrar.php(345): Illuminate\\Support\\Str::singular('ip')
+#7 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\ResourceRegistrar.php(91): Illuminate\\Routing\\ResourceRegistrar->getResourceWildcard('ip')
+#8 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\PendingResourceRegistration.php(166): Illuminate\\Routing\\ResourceRegistrar->register('ip', 'IPController', Array)
+#9 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\PendingResourceRegistration.php(178): Illuminate\\Routing\\PendingResourceRegistration->register()
+#10 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Support\\Facades\\Facade.php(239): Illuminate\\Routing\\PendingResourceRegistration->__destruct()
+#11 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\outes\\web.php(22): Illuminate\\Support\\Facades\\Facade::__callStatic('resource', Array)
+#12 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteFileRegistrar.php(35): require('C:\\\\Bitnami\\\\wamp...')
+#13 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(415): Illuminate\\Routing\\RouteFileRegistrar->register('C:\\\\Bitnami\\\\wamp...')
+#14 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\Router.php(373): Illuminate\\Routing\\Router->loadRoutes('C:\\\\Bitnami\\\\wamp...')
+#15 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Routing\\RouteRegistrar.php(121): Illuminate\\Routing\\Router->group(Array, 'C:\\\\Bitnami\\\\wamp...')
+#16 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\app\\Providers\\RouteServiceProvider.php(56): Illuminate\\Routing\\RouteRegistrar->group('C:\\\\Bitnami\\\\wamp...')
+#17 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\app\\Providers\\RouteServiceProvider.php(40): App\\Providers\\RouteServiceProvider->mapWebRoutes()
+#18 [internal function]: App\\Providers\\RouteServiceProvider->map()
+#19 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#20 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#21 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#22 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(576): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#23 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider.php(87): Illuminate\\Container\\Container->call(Array)
+#24 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider.php(36): Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider->loadRoutes()
+#25 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\app\\Providers\\RouteServiceProvider.php(28): Illuminate\\Foundation\\Support\\Providers\\RouteServiceProvider->boot()
+#26 [internal function]: App\\Providers\\RouteServiceProvider->boot()
+#27 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#28 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#29 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#30 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(576): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#31 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(827): Illuminate\\Container\\Container->call(Array)
+#32 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(810): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\RouteServiceProvider))
+#33 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\RouteServiceProvider), 22)
+#34 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(811): array_walk(Array, Object(Closure))
+#35 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#36 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(210): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#37 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(322): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#38 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#39 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#40 {main}
+"} 
+[2020-12-15 11:13:58] local.ERROR: Uncaught Error: Call to undefined function Symfony\Component\Debug\Exception\get_debug_type() in C:\Bitnami\wampstack-7.3.10-0\apache2\rdmapp\vendor\symfony\debug\Exception\FatalThrowableError.php:29
+Stack trace:
+#0 C:\Bitnami\wampstack-7.3.10-0\apache2\rdmapp\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(141): Symfony\Component\Debug\Exception\FatalThrowableError->__construct(Object(Error))
+#1 Command line code(1): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Uncaught Error: Call to undefined function Symfony\\Component\\Debug\\Exception\\get_debug_type() in C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\symfony\\debug\\Exception\\FatalThrowableError.php:29
+Stack trace:
+#0 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(141): Symfony\\Component\\Debug\\Exception\\FatalThrowableError->__construct(Object(Error))
+#1 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 {main}
+  thrown at C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\symfony\\debug\\Exception\\FatalThrowableError.php:29)
+[stacktrace]
+#0 {main}
+"} 
+[2020-12-15 11:13:58] local.ERROR: Uncaught Error: Call to undefined function Symfony\Component\Debug\Exception\get_debug_type() in C:\Bitnami\wampstack-7.3.10-0\apache2\rdmapp\vendor\symfony\debug\Exception\FatalThrowableError.php:29
+Stack trace:
+#0 C:\Bitnami\wampstack-7.3.10-0\apache2\rdmapp\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(141): Symfony\Component\Debug\Exception\FatalThrowableError->__construct(Object(Error))
+#1 Command line code(1): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Uncaught Error: Call to undefined function Symfony\\Component\\Debug\\Exception\\get_debug_type() in C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\symfony\\debug\\Exception\\FatalThrowableError.php:29
+Stack trace:
+#0 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(141): Symfony\\Component\\Debug\\Exception\\FatalThrowableError->__construct(Object(Error))
+#1 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 {main}
+  thrown at C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\symfony\\debug\\Exception\\FatalThrowableError.php:29)
+[stacktrace]
+#0 {main}
+"} 
+[2020-12-15 11:14:28] local.ERROR: Uncaught Error: Call to undefined function Symfony\Component\Debug\Exception\get_debug_type() in C:\Bitnami\wampstack-7.3.10-0\apache2\rdmapp\vendor\symfony\debug\Exception\FatalThrowableError.php:29
+Stack trace:
+#0 C:\Bitnami\wampstack-7.3.10-0\apache2\rdmapp\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(141): Symfony\Component\Debug\Exception\FatalThrowableError->__construct(Object(Error))
+#1 Command line code(1): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Uncaught Error: Call to undefined function Symfony\\Component\\Debug\\Exception\\get_debug_type() in C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\symfony\\debug\\Exception\\FatalThrowableError.php:29
+Stack trace:
+#0 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(141): Symfony\\Component\\Debug\\Exception\\FatalThrowableError->__construct(Object(Error))
+#1 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 {main}
+  thrown at C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\symfony\\debug\\Exception\\FatalThrowableError.php:29)
+[stacktrace]
+#0 {main}
+"} 
+[2020-12-15 11:14:37] local.ERROR: Uncaught Error: Call to undefined function Symfony\Component\Debug\Exception\get_debug_type() in C:\Bitnami\wampstack-7.3.10-0\apache2\rdmapp\vendor\symfony\debug\Exception\FatalThrowableError.php:29
+Stack trace:
+#0 C:\Bitnami\wampstack-7.3.10-0\apache2\rdmapp\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(141): Symfony\Component\Debug\Exception\FatalThrowableError->__construct(Object(Error))
+#1 Command line code(1): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Uncaught Error: Call to undefined function Symfony\\Component\\Debug\\Exception\\get_debug_type() in C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\symfony\\debug\\Exception\\FatalThrowableError.php:29
+Stack trace:
+#0 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(141): Symfony\\Component\\Debug\\Exception\\FatalThrowableError->__construct(Object(Error))
+#1 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 {main}
+  thrown at C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\symfony\\debug\\Exception\\FatalThrowableError.php:29)
+[stacktrace]
+#0 {main}
+"} 
+[2020-12-15 11:14:37] local.ERROR: Uncaught Error: Call to undefined function Symfony\Component\Debug\Exception\get_debug_type() in C:\Bitnami\wampstack-7.3.10-0\apache2\rdmapp\vendor\symfony\debug\Exception\FatalThrowableError.php:29
+Stack trace:
+#0 C:\Bitnami\wampstack-7.3.10-0\apache2\rdmapp\vendor\laravel\framework\src\Illuminate\Foundation\Console\Kernel.php(141): Symfony\Component\Debug\Exception\FatalThrowableError->__construct(Object(Error))
+#1 Command line code(1): Illuminate\Foundation\Console\Kernel->handle(Object(Symfony\Component\Console\Input\ArgvInput), Object(Symfony\Component\Console\Output\ConsoleOutput))
+#2 {main}
+  thrown {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Uncaught Error: Call to undefined function Symfony\\Component\\Debug\\Exception\\get_debug_type() in C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\symfony\\debug\\Exception\\FatalThrowableError.php:29
+Stack trace:
+#0 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(141): Symfony\\Component\\Debug\\Exception\\FatalThrowableError->__construct(Object(Error))
+#1 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#2 {main}
+  thrown at C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\symfony\\debug\\Exception\\FatalThrowableError.php:29)
+[stacktrace]
+#0 {main}
+"} 
+[2020-12-15 11:15:16] local.ERROR: Class 'Laravel\Passport\Passport' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Laravel\\Passport\\Passport' not found at C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\app\\Providers\\AuthServiceProvider.php:29)
+[stacktrace]
+#0 [internal function]: App\\Providers\\AuthServiceProvider->boot()
+#1 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#2 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#4 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(576): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#5 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(827): Illuminate\\Container\\Container->call(Array)
+#6 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(810): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AuthServiceProvider))
+#7 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AuthServiceProvider), 18)
+#8 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(811): array_walk(Array, Object(Closure))
+#9 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#10 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(210): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#11 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(322): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#12 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#13 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 {main}
+"} 
+[2020-12-15 11:15:37] local.ERROR: Class 'Laravel\Passport\Passport' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Laravel\\Passport\\Passport' not found at C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\app\\Providers\\AuthServiceProvider.php:29)
+[stacktrace]
+#0 [internal function]: App\\Providers\\AuthServiceProvider->boot()
+#1 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#2 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#4 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(576): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#5 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(827): Illuminate\\Container\\Container->call(Array)
+#6 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(810): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AuthServiceProvider))
+#7 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AuthServiceProvider), 19)
+#8 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(811): array_walk(Array, Object(Closure))
+#9 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#10 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(210): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#11 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(322): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#12 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#13 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 {main}
+"} 
+[2020-12-15 11:15:37] local.ERROR: Class 'Laravel\Passport\Passport' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Laravel\\Passport\\Passport' not found at C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\app\\Providers\\AuthServiceProvider.php:29)
+[stacktrace]
+#0 [internal function]: App\\Providers\\AuthServiceProvider->boot()
+#1 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#2 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#4 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(576): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#5 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(827): Illuminate\\Container\\Container->call(Array)
+#6 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(810): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AuthServiceProvider))
+#7 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AuthServiceProvider), 19)
+#8 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(811): array_walk(Array, Object(Closure))
+#9 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#10 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(210): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#11 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(322): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#12 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#13 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 {main}
+"} 
+[2020-12-15 11:15:37] local.ERROR: Trait 'Laravel\Passport\HasApiTokens' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Trait 'Laravel\\Passport\\HasApiTokens' not found at C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\app\\User.php:12)
+[stacktrace]
+#0 {main}
+"} 
+[2020-12-15 11:15:49] local.ERROR: Class 'Laravel\Passport\Passport' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Laravel\\Passport\\Passport' not found at C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\app\\Providers\\AuthServiceProvider.php:29)
+[stacktrace]
+#0 [internal function]: App\\Providers\\AuthServiceProvider->boot()
+#1 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#2 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#4 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(576): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#5 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(827): Illuminate\\Container\\Container->call(Array)
+#6 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(810): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AuthServiceProvider))
+#7 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AuthServiceProvider), 18)
+#8 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(811): array_walk(Array, Object(Closure))
+#9 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#10 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(210): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#11 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(322): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#12 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#13 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\artisan(37): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 {main}
+"} 
+[2020-12-15 11:16:37] local.ERROR: Class 'Laravel\Passport\Passport' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Laravel\\Passport\\Passport' not found at C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\app\\Providers\\AuthServiceProvider.php:29)
+[stacktrace]
+#0 [internal function]: App\\Providers\\AuthServiceProvider->boot()
+#1 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#2 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#4 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(576): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#5 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(827): Illuminate\\Container\\Container->call(Array)
+#6 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(810): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AuthServiceProvider))
+#7 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AuthServiceProvider), 19)
+#8 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(811): array_walk(Array, Object(Closure))
+#9 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#10 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(210): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#11 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(322): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#12 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#13 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 {main}
+"} 
+[2020-12-15 11:16:37] local.ERROR: Class 'Laravel\Passport\Passport' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalThrowableError(code: 0): Class 'Laravel\\Passport\\Passport' not found at C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\app\\Providers\\AuthServiceProvider.php:29)
+[stacktrace]
+#0 [internal function]: App\\Providers\\AuthServiceProvider->boot()
+#1 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(32): call_user_func_array(Array, Array)
+#2 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(90): Illuminate\\Container\\BoundMethod::Illuminate\\Container\\{closure}()
+#3 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\BoundMethod.php(34): Illuminate\\Container\\BoundMethod::callBoundMethod(Object(Illuminate\\Foundation\\Application), Array, Object(Closure))
+#4 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Container\\Container.php(576): Illuminate\\Container\\BoundMethod::call(Object(Illuminate\\Foundation\\Application), Array, Array, NULL)
+#5 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(827): Illuminate\\Container\\Container->call(Array)
+#6 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(810): Illuminate\\Foundation\\Application->bootProvider(Object(App\\Providers\\AuthServiceProvider))
+#7 [internal function]: Illuminate\\Foundation\\Application->Illuminate\\Foundation\\{closure}(Object(App\\Providers\\AuthServiceProvider), 19)
+#8 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(811): array_walk(Array, Object(Closure))
+#9 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Bootstrap\\BootProviders.php(17): Illuminate\\Foundation\\Application->boot()
+#10 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Application.php(210): Illuminate\\Foundation\\Bootstrap\\BootProviders->bootstrap(Object(Illuminate\\Foundation\\Application))
+#11 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(322): Illuminate\\Foundation\\Application->bootstrapWith(Array)
+#12 C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\vendor\\laravel\\framework\\src\\Illuminate\\Foundation\\Console\\Kernel.php(131): Illuminate\\Foundation\\Console\\Kernel->bootstrap()
+#13 Command line code(1): Illuminate\\Foundation\\Console\\Kernel->handle(Object(Symfony\\Component\\Console\\Input\\ArgvInput), Object(Symfony\\Component\\Console\\Output\\ConsoleOutput))
+#14 {main}
+"} 
+[2020-12-15 11:16:37] local.ERROR: Trait 'Laravel\Passport\HasApiTokens' not found {"exception":"[object] (Symfony\\Component\\Debug\\Exception\\FatalErrorException(code: 1): Trait 'Laravel\\Passport\\HasApiTokens' not found at C:\\Bitnami\\wampstack-7.3.10-0\\apache2\dmapp\\app\\User.php:12)
+[stacktrace]
+#0 {main}
+"} 

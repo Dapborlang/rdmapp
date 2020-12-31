@@ -6,7 +6,7 @@
     'aliases' => 
     array (
     ),
-    'reference' => '4699041ca83659e5638735c05c7f9e792ca9a06d',
+    'reference' => '9b294dd350d5852aa135918d78f0e9107c24224e',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -135,12 +135,12 @@
     ),
     'fzaninotto/faker' => 
     array (
-      'pretty_version' => 'v1.9.1',
-      'version' => '1.9.1.0',
+      'pretty_version' => 'v1.9.2',
+      'version' => '1.9.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => 'fc10d778e4b84d5bd315dad194661e091d307c6f',
+      'reference' => '848d8125239d7dbf8ab25cb7f054f1a630e68c2e',
     ),
     'guzzlehttp/guzzle' => 
     array (
@@ -415,7 +415,7 @@
       'aliases' => 
       array (
       ),
-      'reference' => '4699041ca83659e5638735c05c7f9e792ca9a06d',
+      'reference' => '9b294dd350d5852aa135918d78f0e9107c24224e',
     ),
     'laravel/passport' => 
     array (
@@ -437,12 +437,12 @@
     ),
     'lcobucci/jwt' => 
     array (
-      'pretty_version' => '3.4.1',
-      'version' => '3.4.1.0',
+      'pretty_version' => '3.4.2',
+      'version' => '3.4.2.0',
       'aliases' => 
       array (
       ),
-      'reference' => '958a9873a63b0244a72f6e354ccc86019ee674a5',
+      'reference' => '17cb82dd625ccb17c74bf8f38563d3b260306483',
     ),
     'league/event' => 
     array (
@@ -505,12 +505,12 @@
     ),
     'monolog/monolog' => 
     array (
-      'pretty_version' => '1.25.5',
-      'version' => '1.25.5.0',
+      'pretty_version' => '1.26.0',
+      'version' => '1.26.0.0',
       'aliases' => 
       array (
       ),
-      'reference' => '1817faadd1846cd08be9a49e905dc68823bc38c0',
+      'reference' => '2209ddd84e7ef1256b7af205d0717fb62cfc9c33',
     ),
     'myclabs/deep-copy' => 
     array (
@@ -757,8 +757,8 @@
     array (
       'provided' => 
       array (
-        0 => '1.0',
-        1 => '1.0.0',
+        0 => '1.0.0',
+        1 => '1.0',
       ),
     ),
     'psr/simple-cache' => 
@@ -905,12 +905,12 @@
     ),
     'swiftmailer/swiftmailer' => 
     array (
-      'pretty_version' => 'v6.2.3',
-      'version' => '6.2.3.0',
+      'pretty_version' => 'v6.2.4',
+      'version' => '6.2.4.0',
       'aliases' => 
       array (
       ),
-      'reference' => '149cfdf118b169f7840bbe3ef0d4bc795d1780c9',
+      'reference' => '56f0ab23f54c4ccbb0d5dcc67ff8552e0c98d59e',
     ),
     'symfony/console' => 
     array (

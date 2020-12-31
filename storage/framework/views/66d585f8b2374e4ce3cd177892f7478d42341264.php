@@ -21,7 +21,9 @@
 <body>
     <div id="app">
         <div class="fixed-top">
-            <img src="<?php echo e(asset('images/header.jpg')); ?>" style="width:100%; height: 75px;">
+            <div style="width:100%; height: 75px;" class="text-center bg-light">       
+                <span style="font-size: 22px; margin-top: 25px" >Welcome to RD Home Automation </span>  
+            </div>
             <nav class="navbar navbar-expand-md bg-primary navbar-dark">
                 <div class="container">
                     <a class="navbar-brand" href="<?php echo e(url('/')); ?>">
